@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/views
+RewriteCond %{DOCUMENT_ROOT}/views%{REQUEST_URI} -d
+RewriteRule ^(.*?)/?$ /views/$1/ [L]
+
+RewriteCond %{REQUEST_URI} !^/views
+RewriteRule ^(.*)$ /views/$1 [L]
